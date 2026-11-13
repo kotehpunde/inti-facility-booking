@@ -1,0 +1,33 @@
+name: inti_facility_booking
+description: INTI Campus Facility Booking System (Final Year Project).
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+
+  # Supabase client (REST + RPC). Auth is custom, via SQL functions.
+  supabase_flutter: ^2.8.0
+  # Stores the login session on the device
+  shared_preferences: ^2.3.3
+  # Reads SUPABASE_URL / SUPABASE_ANON_KEY from the .env file
+  flutter_dotenv: ^5.2.1
+  # Booking reminders on the phone (8:00 AM the day before)
+  flutter_local_notifications: ^22.3.2
+  # Time zones for scheduled notifications (campus time, Asia/Kuala_Lumpur)
+  timezone: ^0.11.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
